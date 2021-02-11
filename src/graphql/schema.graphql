@@ -1,15 +1,12 @@
-type Movie {
-  id: Int!
-  title: String!
-  rating: Float
-  description_intro: String
-  language: String
-  medium_cover_image: String
-  genres: [String]
+type Car_table {
+  car_id: Int 
+  car_number: String
+  ent_time: String
+  ext_time: String
+  ent_weight: String
+  ext_weight: String
 }
 
 type Query {
-  movies(limit: Int, rating: Float): [Movie]!
-  movie(id: Int!): Movie
-  suggestions(id: Int!): [Movie]!
+  car_table_all() : [Car_table]
 }

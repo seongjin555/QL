@@ -1,11 +1,10 @@
-import { getMovies, getMovie, getSuggestions } from "./db";
+import { GETcar_table} from "./db";
 
 const resolvers = {
   Query: {
-    movies: (_, { rating, limit }) => getMovies(limit, rating),
-    movie: (_, { id }) => getMovie(id),
-    suggestions: (_, { id }) => getSuggestions(id)
+    car_table_all: (_, { col }) => GETcar_table(col)
   }
 };
+
 
 export default resolvers;
