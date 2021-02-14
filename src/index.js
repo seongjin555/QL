@@ -13,24 +13,17 @@ const connection = mysql.createConnection({
 
 connection.connect();
 
-connection.query('SELECT * from car_table', (error, results, fields) => {
-  if (error) throw error;
-  console.table(results);
-});
-
-
 const server = new GraphQLServer({
   typeDefs: `
   type Car_table {
-    car_id: Int 
+    car_id: ID!
     car_number: String
-    ent_time: String
-    ext_time: String
-    ent_weight: String
-    ext_weight: String
+    time: String
+    weight: String
   }
   type Query {
-    car_table_all(col: Int) : [Car_table]
+    car_table_all(car_id: ID) : [Car_table]
+    car_table_number(car_number: String) : [Car_table]
   }
   `,
   resolvers
