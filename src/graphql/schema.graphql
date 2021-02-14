@@ -2,7 +2,7 @@ type Car_table {
   car_id: ID! 
   car_number: String
   time: String
-  weight: String
+  weight: Int
 }
 type Query {
   car_table_all() : [Car_table]

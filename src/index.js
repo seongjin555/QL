@@ -19,7 +19,7 @@ const server = new GraphQLServer({
     car_id: ID!
     car_number: String
     time: String
-    weight: String
+    weight:Int
   }
   type Query {
     car_table_all(car_id: ID) : [Car_table]

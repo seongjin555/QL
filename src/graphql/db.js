@@ -7,7 +7,7 @@ export const GETcar_table = async id => {
       let current_car_number = results[0].car_number
       connection.query("SELECT * from car_table where car_number = \"" + current_car_number + "\"ORDER BY car_id DESC", (error, results, fields) => {
         if (error) throw error;
-        myResolve([results[0],results[1]])
+        myResolve([results[1],results[0]])
       });
     });
   });
