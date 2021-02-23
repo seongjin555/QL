@@ -3,6 +3,7 @@ type Car_table {
   car_number: String
   time: String
   weight: Int
+  car_img: String
 }
 type Query {
   car_table_all() : [Car_table]
