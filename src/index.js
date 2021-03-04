@@ -4,11 +4,11 @@ import resolvers from "./graphql/resolvers";
 const mysql      = require('mysql');
 
 const connection = mysql.createConnection({
-  host     : 'localhost',
-  user     : 'root',
-  port     : '8080',
+  host     : 'database-2.cm4ybrpask95.us-east-1.rds.amazonaws.com',
+  user     : 'admin',
+  port     : '3306',
   password : 'mysql6812',
-  database : 'testDB',
+  database : 'carDB',
 });
 
 connection.connect();
